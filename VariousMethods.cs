@@ -337,7 +337,7 @@ namespace LibraryForStrings
       {
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
-         // Добавление массива строк в файл
+         // Запись массива строк в файл
          File.WriteAllLines(path, stringArray);
       }
 
@@ -346,7 +346,6 @@ namespace LibraryForStrings
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
          // Добавление массива строк в файл
-         string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(path, stringArray);
       }
    }
