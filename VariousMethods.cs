@@ -347,7 +347,7 @@ namespace LibraryForStrings
          string[] stringArray = { line };
          // Добавление массива строк в файл
          string filePath = AppContext.BaseDirectory + nameFile;
-         File.AppendAllLines(filePath, stringArray);
+         File.AppendAllLines(path, stringArray);
       }
    }
 }
