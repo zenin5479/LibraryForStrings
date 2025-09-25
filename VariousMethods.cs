@@ -1,10 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 
 namespace LibraryForStrings
 {
-    public class VariousMethods
-    {
+   public class VariousMethods
+   {
       public static string[,] EnterArrayString(string path)
       {
          // Одномерный массив строк
@@ -338,6 +339,15 @@ namespace LibraryForStrings
          string[] stringArray = { line };
          // Добавление массива строк в файл
          File.WriteAllLines(path, stringArray);
+      }
+
+      public static void FileAppendStringArray(string path, string line)
+      {
+         // Создание одномерного массива строк string[] для записи в файл строки
+         string[] stringArray = { line };
+         // Добавление массива строк в файл
+         string filePath = AppContext.BaseDirectory + nameFile;
+         File.AppendAllLines(filePath, stringArray);
       }
    }
 }
